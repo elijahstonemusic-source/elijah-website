@@ -56,6 +56,22 @@
       .cta-row{gap:8px}
       .small{font-size:.9rem}
     }
+
+#music-video .video-embed{
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+}
+
+#music-video .video-embed iframe{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+    
   </style>
   <style>.album{color:var(--brand);font-style:normal}</style>
 </head>
