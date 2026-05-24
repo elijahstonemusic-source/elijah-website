@@ -71,6 +71,24 @@
   height: 100%;
   border: 0;
 }
+
+.shows-list{display:flex;flex-direction:column;gap:0;margin:0;padding:0}
+.show-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px 16px;padding:14px 16px;border-bottom:1px solid #1e1e28;transition:.15s}
+.show-item:first-child{border-top:1px solid #1e1e28}
+.show-item:hover{background:rgba(138,119,209,.07)}
+.show-date{display:flex;flex-direction:column;align-items:center;min-width:48px;text-align:center}
+.show-date .month{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);line-height:1}
+.show-date .day{font-size:1.4rem;font-weight:800;color:#fff;line-height:1.1}
+.show-date .dow{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);line-height:1;margin-top:2px}
+.show-info{min-width:0}
+.show-venue{font-size:.95rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.show-location{font-size:.8rem;color:var(--muted);margin-top:1px}
+.show-time{font-size:.78rem;color:var(--brand-2);white-space:nowrap;text-align:right;font-weight:600;letter-spacing:.02em}
+@media(max-width:500px){
+  .show-item{grid-template-columns:auto 1fr;grid-template-rows:auto auto}
+  .show-time{grid-column:2;grid-row:2;text-align:left}
+  .show-venue{font-size:.9rem}
+}
     
   </style>
   <style>.album{color:var(--brand);font-style:normal}</style>
@@ -104,28 +122,119 @@
   </div>
 </section>
 
-    <section class="card section" id="shows">
-  <h2>Summer 2026 Shows</h2>
-  <ul class="list">
-    <li>Newton Porchfest · Newton, MA · Sat, Jun 6 · 2–4 PM</li>
-    <li>Danbury Street Festival · Danbury, CT · Sat, Jun 13 · 12–12:45 PM</li>
-    <li>Millerton Farmers Market · Millerton, NY · Sat, Jun 20 · 11 AM–1 PM</li>
-    <li>Quechee Balloon Festival · Hartford, VT · Sun, Jun 21 · 10:30 AM–12 PM</li>
-    <li>Trumbull Farmers Market · Trumbull, CT · Thu, Jul 9 · 4–7 PM</li>
-    <li>Middle East Club · Cambridge, MA · Fri, Jul 17 · 5–8 PM</li>
-    <li>Litchfield Farmers Market · Litchfield, CT · Sat, Jul 18 · 10 AM–1 PM</li>
-    <li>The Lemon Squeeze · New Paltz, NY · Thu, Jul 23 · 7:30–10 PM</li>
-    <li>Pittsfield Farmers Market · Pittsfield, MA · Sat, Jul 25 · 10 AM–12 PM</li>
-    <li>Berkshire Busk · Great Barrington, MA · Sat, Jul 25 · 6:30–8:30 PM</li>
-    <li>Stone Church · Newmarket, NH · Thu, Jul 30 · 6–7:30 PM</li>
-    <li>Westport Farmers Market · Westport, CT · Thu, Aug 20 · 10 AM–2 PM</li>
-    <li>Toad · Cambridge, MA · Fri, Aug 21 · 6–9 PM</li>
-    <li>New Canaan Farmers Market · New Canaan, CT · Sat, Aug 22 · 10 AM–2 PM</li>
-    <li>Poughkeepsie Porchfest · Poughkeepsie, NY · Sun, Aug 23 · TBD</li>
-    <li>Windsor Lake Concert · North Adams, MA · Wed, Aug 26 · 6:30–8 PM</li>
-    <li>Sheffield Farmers Market · Sheffield, MA · Fri, Aug 28 · 3–6 PM</li>
-    <li>Litchfield Farmers Market · Litchfield, CT · Sat, Aug 29 · 10 AM–1 PM</li>
-  </ul>
+ <section class="card section" id="shows">
+<h2>Summer 2026 Shows</h2>
+<div class="shows-list">
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jun</span><span class="day">6</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Newton Porchfest</div><div class="show-location">Newton, MA</div></div>
+    <div class="show-time">2–4 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jun</span><span class="day">13</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Danbury Street Festival</div><div class="show-location">Danbury, CT</div></div>
+    <div class="show-time">12–12:45 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Millerton Farmers Market</div><div class="show-location">Millerton, NY</div></div>
+    <div class="show-time">11 AM–1 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jun</span><span class="day">21</span><span class="dow">Sun</span></div>
+    <div class="show-info"><div class="show-venue">Quechee Balloon Festival</div><div class="show-location">Hartford, VT</div></div>
+    <div class="show-time">10:30 AM–12 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">9</span><span class="dow">Thu</span></div>
+    <div class="show-info"><div class="show-venue">Trumbull Farmers Market</div><div class="show-location">Trumbull, CT</div></div>
+    <div class="show-time">4–7 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">17</span><span class="dow">Fri</span></div>
+    <div class="show-info"><div class="show-venue">Middle East Club</div><div class="show-location">Cambridge, MA</div></div>
+    <div class="show-time">5–8 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">18</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Litchfield Farmers Market</div><div class="show-location">Litchfield, CT</div></div>
+    <div class="show-time">10 AM–1 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">23</span><span class="dow">Thu</span></div>
+    <div class="show-info"><div class="show-venue">The Lemon Squeeze</div><div class="show-location">New Paltz, NY</div></div>
+    <div class="show-time">7:30–10 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">25</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Pittsfield Farmers Market</div><div class="show-location">Pittsfield, MA</div></div>
+    <div class="show-time">10 AM–12 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">25</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Berkshire Busk</div><div class="show-location">Great Barrington, MA</div></div>
+    <div class="show-time">6:30–8:30 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Jul</span><span class="day">30</span><span class="dow">Thu</span></div>
+    <div class="show-info"><div class="show-venue">Stone Church</div><div class="show-location">Newmarket, NH</div></div>
+    <div class="show-time">6–7:30 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">20</span><span class="dow">Thu</span></div>
+    <div class="show-info"><div class="show-venue">Westport Farmers Market</div><div class="show-location">Westport, CT</div></div>
+    <div class="show-time">10 AM–2 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">21</span><span class="dow">Fri</span></div>
+    <div class="show-info"><div class="show-venue">Toad</div><div class="show-location">Cambridge, MA</div></div>
+    <div class="show-time">6–9 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">22</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">New Canaan Farmers Market</div><div class="show-location">New Canaan, CT</div></div>
+    <div class="show-time">10 AM–2 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">23</span><span class="dow">Sun</span></div>
+    <div class="show-info"><div class="show-venue">Poughkeepsie Porchfest</div><div class="show-location">Poughkeepsie, NY</div></div>
+    <div class="show-time">TBD</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">26</span><span class="dow">Wed</span></div>
+    <div class="show-info"><div class="show-venue">Windsor Lake Concert</div><div class="show-location">North Adams, MA</div></div>
+    <div class="show-time">6:30–8 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">28</span><span class="dow">Fri</span></div>
+    <div class="show-info"><div class="show-venue">Sheffield Farmers Market</div><div class="show-location">Sheffield, MA</div></div>
+    <div class="show-time">3–6 PM</div>
+  </div>
+
+  <div class="show-item">
+    <div class="show-date"><span class="month">Aug</span><span class="day">29</span><span class="dow">Sat</span></div>
+    <div class="show-info"><div class="show-venue">Litchfield Farmers Market</div><div class="show-location">Litchfield, CT</div></div>
+    <div class="show-time">10 AM–1 PM</div>
+  </div>
+
+</div>
 </section>
 
 <section class="card section"><h2>Instagram</h2><p>Follow Elijah for music updates, show clips, and more.</p><div class="cta-row"><a class="btn primary" href="https://www.instagram.com/elijahstonesongs/" rel="noopener" target="_blank">Open Instagram</a></div></section><section class="section card">
