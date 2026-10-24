@@ -1,280 +1,221 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Elijah Stone — Singer • Songwriter</title>
-<meta content="Elijah Stone — NYC singer-songwriter. Twenty-Second Catch drops October 17th. Show info and contact." name="description"/>
-<meta content="Elijah Stone — Singer • Songwriter" property="og:title"/>
-<meta content="Twenty-Second Catch drops October 17th. Show info and contact." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="#8A77D1" name="theme-color"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elijah Stone — NYC Singer-Songwriter</title>
+<meta name="description" content="Elijah Stone is an NYC singer-songwriter making timeless, groovy pop. Stream Twenty-Second Catch and watch him live.">
+<meta property="og:title" content="Elijah Stone — NYC Singer-Songwriter">
+<meta property="og:description" content="NYC singer-songwriter making timeless, groovy pop.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elijahstonemusic.com/">
+<meta property="og:image" content="https://elijahstonemusic.com/images/share-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f0f12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    :root{
-      --bg:#0f0f12; --panel:#17171c; --text:#f3f4f6; --muted:#a7adc0;
-      --brand:#8A77D1; --brand-2:#D8D2F2; --card: transparent;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-      background: linear-gradient(180deg, #0f0f12 0%, #17171c 50%, #0f0f12 100%);
-      color:var(--text); line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:980px;margin-inline:auto;padding:28px}
-    header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between;background: transparent}
-    .brand{font-weight:800;letter-spacing:.2px;font-size:1.25rem}
-    .tagline{font-weight:700;color:var(--brand-2);text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;margin-left:auto}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:10px 14px;border-radius:14px;
-      background:linear-gradient(180deg, #1d1d24, #14141a);border:1px solid #262631; box-shadow:0 1px 0 rgba(255,255,255,.05) inset; transition:.2s}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.35)}
-    .btn.primary{background:linear-gradient(180deg, var(--brand), #6f5fb0);border-color:#6f5fb0;color:#fff}
-    .hero{margin:28px 0;display:grid;grid-template-columns:1fr;gap:16px;justify-items:center;text-align:center}
-    .hero h1{font-size:clamp(1.8rem, 4.2vw, 2.6rem);line-height:1.1;margin:0 0 8px;white-space:nowrap;color:#fff}
-    .hero em{color:var(--brand);font-style:italic}
-    .card{border:1px solid #262631;border-radius:20px;padding:24px 20px;box-shadow:0 6px 30px rgba(0,0,0,.35);background: transparent}
-    .section{margin:28px 0}
-    h2{font-size:1.25rem;margin:0 0 12px}
-    .list{display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
-    .list li{list-style:none;padding:12px 14px;border:1px dashed #2a2a36;border-radius:14px;background:#13131a}
-    footer{margin:48px 0 12px;color:#8b90a6;font-size:.9rem}
-    .small{font-size:.95rem;color:#9aa1b8}
-    .cta-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-    .hero-img{width:80%;height:auto;border-radius:16px;display:block;object-fit:contain}
-    .spacer-bottom{padding-bottom:40px}
-    @media (max-width: 768px){
-      .wrap{padding:20px}
-      .tagline{margin-left:0}
-      .hero h1{font-size:clamp(1.4rem, 6vw, 2rem)}
-      .hero-img{width:100%}
-    }
-    @media (max-width: 420px){
-      header{justify-content:center;text-align:center}
-      .tagline{width:100%;text-align:center;margin-top:4px}
-      .hero h1{white-space:normal}
-      .cta-row{gap:8px}
-      .small{font-size:.9rem}
-    }
+  :root{
+    --bg:#0f0f12; --panel:#17171c; --line:#262631;
+    --text:#f3f4f6; --muted:#a7adc0;
+    --purple:#8A77D1; --lilac:#D8D2F2; --blue:#5B8CFF;
+    --display:"Bricolage Grotesque", Inter, system-ui, sans-serif;
+    --body:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);color:var(--text);line-height:1.6;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(91,140,255,.16), transparent 60%),
+      radial-gradient(800px 500px at -10% 30%, rgba(138,119,209,.14), transparent 60%),
+      var(--bg);}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-#music-video .video-embed{
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  overflow: hidden;
-}
+  /* top bar */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;flex-wrap:wrap}
+  .top .brand{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.01em}
+  .top nav{display:flex;gap:6px;flex-wrap:wrap}
+  .top nav a{padding:6px 12px;border-radius:999px;font-size:.92rem;color:var(--muted);transition:color .15s, background .15s}
+  .top nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+  .top nav a.epk{color:var(--text);border:1px solid var(--line)}
 
-#music-video .video-embed iframe{
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+  /* hero */
+  .hero{padding:28px 0 8px}
+  .hero h1{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;
+    font-size:clamp(3.6rem, 14vw, 9.5rem);line-height:.86;letter-spacing:-.025em;margin:0;color:#fff}
+  .squiggle{display:block;width:min(520px, 70%);height:auto;margin:6px 0 0 4px;transform:rotate(-1.5deg)}
+  .tagline{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem, 2.6vw, 1.6rem);
+    color:var(--lilac);margin:14px 0 26px;max-width:32ch;line-height:1.3}
+  .hero-photo{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.45);aspect-ratio:16/9}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 
-.shows-list{display:flex;flex-direction:column;gap:0;margin:0;padding:0}
-.show-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px 16px;padding:14px 16px;border-bottom:1px solid #1e1e28;transition:.15s}
-.show-item:first-child{border-top:1px solid #1e1e28}
-.show-item:hover{background:rgba(138,119,209,.07)}
-.show-date{display:flex;flex-direction:column;align-items:center;min-width:48px;text-align:center}
-.show-date .month{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);line-height:1}
-.show-date .day{font-size:1.4rem;font-weight:800;color:#fff;line-height:1.1}
-.show-date .dow{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);line-height:1;margin-top:2px}
-.show-info{min-width:0}
-.show-venue{font-size:.95rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.show-location{font-size:.8rem;color:var(--muted);margin-top:1px}
-.show-time{font-size:.78rem;color:var(--brand-2);white-space:nowrap;text-align:right;font-weight:600;letter-spacing:.02em}
-@media(max-width:500px){
-  .show-item{grid-template-columns:auto 1fr;grid-template-rows:auto auto}
-  .show-time{grid-column:2;grid-row:2;text-align:left}
-  .show-venue{font-size:.9rem}
-}
-    
-  </style>
-  <style>.album{color:var(--brand);font-style:normal}</style>
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 18px;border-radius:14px;font-weight:600;font-size:.98rem;
+    background:linear-gradient(180deg,#1d1d24,#14141a);border:1px solid var(--line);transition:transform .15s, box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  .btn.primary{background:linear-gradient(180deg,var(--purple),#6f5fb0);border-color:#6f5fb0;color:#fff}
+  .btn.blue{background:linear-gradient(180deg,var(--blue),#3f6be0);border-color:#3f6be0;color:#fff}
+
+  /* sections */
+  section.block{padding:64px 0 0}
+  .block h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem, 5vw, 3rem);line-height:1;margin:0 0 20px;letter-spacing:-.01em}
+  .video{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .bio{font-size:1.12rem;max-width:62ch;color:#e6e7ee}
+  .bio p{margin:0}
+
+  /* listen */
+  .ep{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(23,23,28,.7)}
+  .ep h3{font-family:var(--display);font-weight:800;font-size:1.7rem;margin:0;line-height:1.1}
+  .ep .meta{color:var(--muted);margin:4px 0 14px;font-size:.95rem}
+  .ep ol{margin:0;padding-left:1.3em;color:#e6e7ee;columns:2;column-gap:28px}
+  .ep .cta-row{margin-top:0;flex-direction:column;align-items:stretch}
+  .ep .btn{justify-content:center}
+
+  /* photos */
+  .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:6px}
+  .photos figure{margin:0;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4);transition:transform .25s}
+  .photos figure:nth-child(1){transform:rotate(-2deg)}
+  .photos figure:nth-child(2){transform:rotate(1.5deg) translateY(10px)}
+  .photos figure:nth-child(3){transform:rotate(-1deg)}
+  .photos figure:hover{transform:rotate(0) scale(1.02)}
+  .photos img{width:100%;height:100%;object-fit:cover}
+
+  /* contact */
+  .contact{padding:30px;border:1px solid var(--line);border-radius:20px;background:rgba(23,23,28,.7)}
+  .contact p{margin:0 0 18px;color:#e6e7ee;font-size:1.05rem}
+  .contact .cta-row{margin-top:0}
+  .booking{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .booking span{font-family:var(--display);font-weight:700;font-size:1.25rem}
+
+  footer{margin:72px 0 28px;color:#8b90a6;font-size:.88rem}
+
+  @media (max-width:760px){
+    .wrap{padding:0 18px}
+    .ep{grid-template-columns:1fr}
+    .ep .cta-row{flex-direction:row;flex-wrap:wrap}
+    .ep ol{columns:1}
+    .photos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:10px 4px 18px;margin:0 -18px;padding-left:18px;padding-right:18px}
+    .photos figure{flex:0 0 72%;scroll-snap-align:center}
+    section.block{padding-top:52px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
 </head>
 <body>
 <div class="wrap">
-<header>
-<div class="brand">ELIJAH STONE</div>
-<div class="tagline">NYC SINGER   SONGWRITER</div>
-</header>
-<section class="hero">
-<img alt="Elijah Stone performing" class="hero-img" src="hero.jpg">
-    <h1>Stream <span class="album">Twenty-Second Catch</span> Now</h1>
-<!-- Centered Pre-Save Now button -->
-<div class="cta-row" style="justify-content:center;">
-<a class="btn primary" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
-      <a class="btn primary" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
+
+  <header class="top">
+    <a class="brand" href="/">ELIJAH STONE</a>
+    <nav aria-label="Main">
+      <a href="#watch">Watch</a>
+      <a href="#about">About</a>
+      <a href="#listen">Listen</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+      <a class="epk" href="/epk/">EPK</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Elijah<br>Stone</h1>
+    <svg class="squiggle" viewBox="0 0 520 28" aria-hidden="true">
+      <defs><linearGradient id="sq" x1="0" x2="1"><stop offset="0" stop-color="#8A77D1"/><stop offset="1" stop-color="#5B8CFF"/></linearGradient></defs>
+      <path d="M4 18 C 40 6, 70 26, 108 14 S 170 4, 210 16 S 280 26, 318 12 S 390 4, 430 15 S 490 22, 516 9" fill="none" stroke="url(#sq)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <p class="tagline">NYC singer-songwriter making timeless, groovy pop.</p>
+    <div class="hero-photo">
+      <img src="images/header-walking.jpg" alt="Elijah Stone walking across a New York City street with his guitar" width="2400" height="1350">
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#watch">Watch him live</a>
+      <a class="btn blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </section>
+
+  <section class="block" id="watch">
+    <h2>Watch</h2>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/U0a0OQ2kHd4?rel=0" title="Elijah Stone — live highlight reel" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <h2>About</h2>
+    <div class="bio">
+      <p>Elijah Stone is a New York–based singer-songwriter whose originals blend pop, rock, and soul into a fresh yet timeless sound. His debut EP <em>Twenty-Second Catch</em> was released in 2025, showcasing groove-forward, hook-driven songs with candid lyricism. Following that, he released his first music video for “Look Listen” and completed a 22-show summer tour of the Northeast. He has a new album forthcoming, and is currently booking shows for 2027.</p>
+    </div>
+  </section>
+
+  <!-- I'LL PASS (hidden until release). To show it: paste in the real links, then delete this line and the "END" line below.
+  <section class="block" id="new-single">
+    <h2>New single: “I’ll Pass”</h2>
+    <div class="cta-row" style="margin-top:0">
+      <a class="btn primary" href="PASTE-SPOTIFY-LINK" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="PASTE-APPLE-MUSIC-LINK" target="_blank" rel="noopener">Apple Music</a>
+    </div>
+  </section>
+  END -->
+
+  <section class="block" id="listen">
+    <h2>Listen</h2>
+    <div class="ep">
+      <div>
+        <h3>Twenty-Second Catch</h3>
+        <p class="meta">Debut EP, 2025</p>
+        <ol>
+          <li>Look Listen</li>
+          <li>Eileen Never Lies</li>
+          <li>Walk All Over Me</li>
+          <li>People Pleaser</li>
+        </ol>
+      </div>
+      <div class="cta-row">
+        <a class="btn blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
+        <a class="btn" href="https://www.youtube.com/@elijahstonesongs" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UPCOMING SHOWS — hidden for now. Ask Claude to switch this on when 2027 dates are booked. ===== -->
+
+  <section class="block" id="photos">
+    <h2>Photos</h2>
+    <div class="photos">
+      <figure><img src="images/live-purple.jpg" alt="Elijah Stone singing on a purple-lit stage" loading="lazy" width="1200" height="1500"></figure>
+      <figure><img src="images/live-outdoor.jpg" alt="Elijah Stone playing an outdoor daytime show" loading="lazy" width="1200" height="1500"></figure>
+      <figure><img src="images/phone-booth.jpg" alt="Close-up of Elijah Stone in a phone booth" loading="lazy" width="576" height="720"></figure>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Questions, collabs, or just want to say hi? Send me a note.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:elijahstonemusic@gmail.com">elijahstonemusic@gmail.com</a>
+        <a class="btn" href="https://www.instagram.com/elijahstonesongs/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.youtube.com/@elijahstonesongs" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <div class="booking">
+        <span>Booking a show?</span>
+        <a class="btn blue" href="/epk/">Open the EPK</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year">2026</span> Elijah Stone Music Group • NYC</footer>
 </div>
-</section>
-
-    <section class="card section" id="music-video">
-  <h2>Watch the “Look Listen” Music Video</h2>
-
-  <div class="video-embed">
-    <iframe
-      src="https://www.youtube.com/embed/uQIve5WK1C4"
-      title="Elijah Stone — Look Listen (Music Video)"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
- <section class="card section" id="shows">
-<h2>Twenty-Second Catch Tour</h2>
-<div class="shows-list">
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jun</span><span class="day">6</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Newton Porchfest</div><div class="show-location">Newton, MA</div></div>
-    <div class="show-time">2–4 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jun</span><span class="day">13</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Danbury Street Festival</div><div class="show-location">Danbury, CT</div></div>
-    <div class="show-time">12–12:45 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jun</span><span class="day">20</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Millerton Farmers Market</div><div class="show-location">Millerton, NY</div></div>
-    <div class="show-time">11 AM–1 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jun</span><span class="day">21</span><span class="dow">Sun</span></div>
-    <div class="show-info"><div class="show-venue">Quechee Balloon Festival</div><div class="show-location">Hartford, VT</div></div>
-    <div class="show-time">10:30 AM–12 PM</div>
-  </div>
-
-    <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">4</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Berkshire Busk</div><div class="show-location">Great Barrington, MA</div></div>
-    <div class="show-time">6:30-8:30</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">9</span><span class="dow">Thu</span></div>
-    <div class="show-info"><div class="show-venue">Trumbull Farmers Market</div><div class="show-location">Trumbull, CT</div></div>
-    <div class="show-time">4–7 PM</div>
-  </div>
-
-    <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">12</span><span class="dow">Sun</span></div>
-    <div class="show-info"><div class="show-venue">Shelburne Falls Porchfest</div><div class="show-location">Shelburne Falls, MA</div></div>
-    <div class="show-time">3-4 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">17</span><span class="dow">Fri</span></div>
-    <div class="show-info"><div class="show-venue">Middle East Club</div><div class="show-location">Cambridge, MA</div></div>
-    <div class="show-time">5–8 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">18</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Litchfield Farmers Market</div><div class="show-location">Litchfield, CT</div></div>
-    <div class="show-time">10 AM–1 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">23</span><span class="dow">Thu</span></div>
-    <div class="show-info"><div class="show-venue">The Lemon Squeeze</div><div class="show-location">New Paltz, NY</div></div>
-    <div class="show-time">7:30–10 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">25</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Pittsfield Farmers Market</div><div class="show-location">Pittsfield, MA</div></div>
-    <div class="show-time">10 AM–12 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">25</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Berkshire Busk</div><div class="show-location">Great Barrington, MA</div></div>
-    <div class="show-time">6:30–8:30 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Jul</span><span class="day">30</span><span class="dow">Thu</span></div>
-    <div class="show-info"><div class="show-venue">Stone Church</div><div class="show-location">Newmarket, NH</div></div>
-    <div class="show-time">6–7:30 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">20</span><span class="dow">Thu</span></div>
-    <div class="show-info"><div class="show-venue">Westport Farmers Market</div><div class="show-location">Westport, CT</div></div>
-    <div class="show-time">10 AM–2 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">21</span><span class="dow">Fri</span></div>
-    <div class="show-info"><div class="show-venue">Toad</div><div class="show-location">Cambridge, MA</div></div>
-    <div class="show-time">6–9 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">22</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">New Canaan Farmers Market</div><div class="show-location">New Canaan, CT</div></div>
-    <div class="show-time">10 AM–2 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">23</span><span class="dow">Sun</span></div>
-    <div class="show-info"><div class="show-venue">Poughkeepsie Porchfest</div><div class="show-location">Poughkeepsie, NY</div></div>
-    <div class="show-time">TBD</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">26</span><span class="dow">Wed</span></div>
-    <div class="show-info"><div class="show-venue">Windsor Lake Concert</div><div class="show-location">North Adams, MA</div></div>
-    <div class="show-time">6:30–8 PM</div>
-  </div>
-
-    <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">27</span><span class="dow">Thu</span></div>
-    <div class="show-info"><div class="show-venue">Armory Farmers Market</div><div class="show-location">Providence, RI</div></div>
-    <div class="show-time">3–6 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">28</span><span class="dow">Fri</span></div>
-    <div class="show-info"><div class="show-venue">Sheffield Farmers Market</div><div class="show-location">Sheffield, MA</div></div>
-    <div class="show-time">3–6 PM</div>
-  </div>
-
-  <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">29</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Litchfield Farmers Market</div><div class="show-location">Litchfield, CT</div></div>
-    <div class="show-time">10 AM–1 PM</div>
-  </div>
-
-    <div class="show-item">
-    <div class="show-date"><span class="month">Aug</span><span class="day">29</span><span class="dow">Sat</span></div>
-    <div class="show-info"><div class="show-venue">Old Wethersfield Porchfest</div><div class="show-location">Old Wethersfield, CT</div></div>
-    <div class="show-time">5–6 PM</div>
-  </div>
-
-</div>
-</section>
-
-<section class="card section"><h2>Instagram</h2><p>Follow Elijah for music updates, show clips, and more.</p><div class="cta-row"><a class="btn primary" href="https://www.instagram.com/elijahstonesongs/" rel="noopener" target="_blank">Open Instagram</a></div></section><section class="section card">
-<h2>Contact</h2>
-<p class="small">Bookings, collabs, or whatever you have in mind. Send a note!</p>
-<div class="cta-row">
-  <a class="btn" href="mailto:elijahstonemusic@gmail.com">elijahstonemusic@gmail.com</a>
-  <a class="btn primary" href="/epk/">View EPK</a>
-</div>
-</section>
-<footer>
-<div>© <span id="year"></span> Elijah Stone Music Group • NYC</div>
-</footer>
-</div>
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
