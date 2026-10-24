@@ -69,12 +69,12 @@
   .bio p{margin:0}
 
   /* listen */
-  .ep{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(23,23,28,.7)}
-  .ep h3{font-family:var(--display);font-weight:800;font-size:1.7rem;margin:0;line-height:1.1}
-  .ep .meta{color:var(--muted);margin:4px 0 14px;font-size:.95rem}
-  .ep ol{margin:0;padding-left:1.3em;color:#e6e7ee;columns:2;column-gap:28px}
-  .ep .cta-row{margin-top:0;flex-direction:column;align-items:stretch}
-  .ep .btn{justify-content:center}
+  .ep-name{margin:-8px 0 18px;color:var(--muted);font-size:1.05rem}
+  .songs{list-style:none;margin:0;padding:0;counter-reset:s}
+  .songs li{counter-increment:s;display:flex;align-items:baseline;gap:16px;padding:6px 0;
+    font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;font-size:clamp(2rem, 6vw, 3.4rem);line-height:1.05;letter-spacing:-.01em;color:#fff}
+  .songs li::before{content:counter(s);font-family:var(--body);font-weight:600;font-size:.95rem;color:var(--purple);min-width:1.2em}
+  .songs li:nth-child(even){color:var(--lilac)}
 
   /* photos */
   .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:6px}
@@ -96,9 +96,6 @@
 
   @media (max-width:760px){
     .wrap{padding:0 18px}
-    .ep{grid-template-columns:1fr}
-    .ep .cta-row{flex-direction:row;flex-wrap:wrap}
-    .ep ol{columns:1}
     .photos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:10px 4px 18px;margin:0 -18px;padding-left:18px;padding-right:18px}
     .photos figure{flex:0 0 72%;scroll-snap-align:center}
     section.block{padding-top:52px}
@@ -132,7 +129,7 @@
     </svg>
     <p class="tagline">NYC singer-songwriter making timeless, groovy pop.</p>
     <div class="hero-photo">
-      <img src="images/header-walking.jpg" alt="Elijah Stone walking across a New York City street with his guitar" width="2400" height="1350">
+      <img src="images/header-live.jpg" alt="Elijah Stone singing on a purple-lit stage" width="2400" height="1350">
     </div>
     <div class="cta-row">
       <a class="btn primary" href="#watch">Watch him live</a>
@@ -168,22 +165,16 @@
 
   <section class="block" id="listen">
     <h2>Listen</h2>
-    <div class="ep">
-      <div>
-        <h3>Twenty-Second Catch</h3>
-        <p class="meta">Debut EP, 2025</p>
-        <ol>
-          <li>Look Listen</li>
-          <li>Eileen Never Lies</li>
-          <li>Walk All Over Me</li>
-          <li>People Pleaser</li>
-        </ol>
-      </div>
-      <div class="cta-row">
-        <a class="btn blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
-        <a class="btn" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
-        <a class="btn" href="https://www.youtube.com/@elijahstonesongs" target="_blank" rel="noopener">YouTube</a>
-      </div>
+    <p class="ep-name"><em>Twenty-Second Catch</em>, debut EP (2025)</p>
+    <ol class="songs">
+      <li>Look Listen</li>
+      <li>Eileen Never Lies</li>
+      <li>Walk All Over Me</li>
+      <li>People Pleaser</li>
+    </ol>
+    <div class="cta-row">
+      <a class="btn blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
     </div>
   </section>
 
@@ -192,7 +183,7 @@
   <section class="block" id="photos">
     <h2>Photos</h2>
     <div class="photos">
-      <figure><img src="images/live-purple.jpg" alt="Elijah Stone singing on a purple-lit stage" loading="lazy" width="1200" height="1500"></figure>
+      <figure><img src="images/walking.jpg" alt="Elijah Stone walking across a New York City street with his guitar" loading="lazy" width="1200" height="1500"></figure>
       <figure><img src="images/live-outdoor.jpg" alt="Elijah Stone playing an outdoor daytime show" loading="lazy" width="1200" height="1500"></figure>
       <figure><img src="images/phone-booth.jpg" alt="Close-up of Elijah Stone in a phone booth" loading="lazy" width="576" height="720"></figure>
     </div>
