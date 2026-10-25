@@ -9,7 +9,7 @@
 <meta property="og:description" content="NYC singer-songwriter making timeless, groovy pop. Live video, tech info, photos and booking.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://elijahstonemusic.com/epk/">
-<meta property="og:image" content="https://elijahstonemusic.com/images/share-image.jpg">
+<meta property="og:image" content="https://elijahstonemusic.com/images/share-live.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f0f12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,6 +87,20 @@
   .vids{display:grid;gap:30px}
   .vid h3{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 2px}
   .vid p{margin:0 0 12px;color:var(--muted);font-size:.95rem}
+
+  /* quotes */
+  .quotes{display:grid;gap:30px;max-width:780px;margin:0;padding:0;list-style:none}
+  .quotes blockquote{margin:0;padding-left:22px;border-left:4px solid var(--purple)}
+  .quotes li:nth-child(even) blockquote{border-left-color:var(--blue)}
+  .quotes p{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(1.3rem, 2.8vw, 1.75rem);line-height:1.3;color:#fff}
+  .quotes cite{display:block;margin-top:8px;font-style:normal;color:var(--muted);font-size:.95rem}
+
+  /* press */
+  .press{max-width:780px;padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(23,23,28,.7)}
+  .press .pub{font-family:var(--display);font-weight:800;font-size:1.5rem;margin:0}
+  .press .meta{margin:2px 0 16px;color:var(--muted);font-size:.95rem}
+  .press h3{font-family:var(--display);font-weight:700;font-size:clamp(1.25rem, 2.6vw, 1.6rem);line-height:1.25;margin:0 0 14px}
+  .press blockquote{margin:0 0 20px;padding-left:18px;border-left:4px solid var(--blue);color:#e6e7ee;font-size:1.08rem}
 
   /* bio */
   .bio{font-size:1.12rem;max-width:64ch;color:#e6e7ee}
@@ -170,7 +184,7 @@
   </div>
 
   <section class="reel" aria-label="Highlight reel">
-    <h2>Highlight reel <span>1:50</span></h2>
+    <h2>Highlight reel</h2>
     <div class="video">
       <iframe src="https://www.youtube-nocookie.com/embed/SvuoNSjaqKA?rel=0" title="Elijah Stone — live highlight reel"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -207,6 +221,30 @@
         </div>
         END HIDDEN -->
       </div>
+    </div>
+  </details>
+
+  <details id="quotes">
+    <summary><span class="label">QUOTES</span><span class="hint">From the crowd</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <div class="panel">
+      <ul class="quotes">
+        <li><blockquote><p>“I thought there was a full band on stage when I first heard you! I was shocked when I saw you were performing solo.”</p><cite>Audience member, Quechee Balloon Festival</cite></blockquote></li>
+        <li><blockquote><p>“We came to Porchfest to see YOU and you did NOT disappoint.”</p><cite>Audience member, Old Wethersfield Porchfest</cite></blockquote></li>
+        <li><blockquote><p>“I would drop everything and tour with you right now.”</p><cite>Guitarist in the audience</cite></blockquote></li>
+      </ul>
+    </div>
+  </details>
+
+  <details id="press">
+    <summary><span class="label">PRESS</span><span class="hint">Lakeville Journal</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <div class="panel">
+      <article class="press">
+        <p class="pub">The Lakeville Journal</p>
+        <p class="meta">June 24, 2026, by Patrick L. Sullivan</p>
+        <h3>Salisbury native trades NYC for outdoor summer tour</h3>
+        <blockquote>“His arrangements were simple and tasteful, while his vocals were precise and unstrained.”</blockquote>
+        <a class="btn blue" href="https://lakevillejournal.com/salisbury-native-trades-nyc-for-outdoor-summer-tour" target="_blank" rel="noopener">Read the article</a>
+      </article>
     </div>
   </details>
 
@@ -308,7 +346,7 @@
           <figcaption><span>Live, outdoor<br>2935 × 3913</span><a class="btn small" href="photos/Elijah-Stone-Live-2.jpg" download>Download</a></figcaption>
         </figure>
         <figure>
-          <div class="pic"><img loading="lazy" src="../images/header-walking.jpg" alt="Elijah Stone walking across a New York City street with his guitar" style="object-position:48% 50%"></div>
+          <div class="pic"><img loading="lazy" src="../images/walking.jpg" alt="Elijah Stone walking across a New York City street with his guitar" width="1200" height="1500"></div>
           <figcaption><span>NYC street, wide<br>4096 × 2160</span><a class="btn small" href="photos/Elijah-Stone-NYC.jpg" download>Download</a></figcaption>
         </figure>
         <figure>
@@ -316,8 +354,8 @@
           <figcaption><span>Portrait, outdoor<br>1509 × 2000</span><a class="btn small" href="photos/Elijah-Stone-Portrait-Outdoor.jpg" download>Download</a></figcaption>
         </figure>
         <figure>
-          <div class="pic"><img loading="lazy" src="../images/neon-portrait.jpg" alt="Portrait of Elijah Stone in neon light" width="1200" height="1500"></div>
-          <figcaption><span>Portrait, neon<br>1760 × 2200</span><a class="btn small" href="photos/Elijah-Stone-Portrait.jpg" download>Download</a></figcaption>
+          <div class="pic"><img loading="lazy" src="../images/indoor-guitar.jpg" alt="Elijah Stone playing electric guitar indoors next to his amp" width="1200" height="1500"></div>
+          <figcaption><span>Indoor, guitar<br>2304 × 1728</span><a class="btn small" href="photos/Elijah-Stone-Guitar.jpg" download>Download</a></figcaption>
         </figure>
         <figure>
           <div class="pic"><img loading="lazy" src="../images/phone-booth.jpg" alt="Close-up of Elijah Stone in a phone booth" width="576" height="720"></div>
@@ -334,7 +372,7 @@
         <div class="row">
           <strong>Twenty-Second Catch<span class="sub">Debut EP, 2025</span></strong>
           <span class="links">
-            <a class="btn small blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
+            <a class="btn small" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
             <a class="btn small" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
           </span>
         </div>
