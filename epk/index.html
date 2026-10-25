@@ -71,8 +71,7 @@
   summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;padding:18px 4px;user-select:none}
   summary::-webkit-details-marker{display:none}
   .label{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;font-size:clamp(2.4rem, 8.5vw, 5.2rem);line-height:.95;letter-spacing:-.01em;transition:color .2s}
-  .hint{color:var(--muted);font-size:.92rem;margin-left:auto;text-align:right}
-  .arrow{flex:0 0 auto;width:clamp(30px, 5vw, 46px);height:auto}
+  .arrow{flex:0 0 auto;width:clamp(30px, 5vw, 46px);height:auto;margin-left:auto}
   .arrow{stroke:var(--lilac);transition:transform .3s ease, stroke .2s}
   summary:hover .label{color:var(--lilac)}
   summary:hover .arrow{transform:translateY(4px)}
@@ -148,7 +147,6 @@
   @media (max-width:760px){
     .wrap{padding:0 18px}
     .shows,.tech{grid-template-columns:1fr}
-    .hint{display:none}
     summary{justify-content:space-between}
     .grid{grid-template-columns:1fr 1fr;gap:14px}
   }
@@ -200,7 +198,7 @@
   </svg>
 
   <details id="live">
-    <summary><span class="label">LIVE VIDEO</span><span class="hint">2 full songs</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">LIVE VIDEO</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <div class="vids">
         <div class="vid">
@@ -225,7 +223,7 @@
   </details>
 
   <details id="quotes">
-    <summary><span class="label">QUOTES</span><span class="hint">From the crowd</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">QUOTES</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <ul class="quotes">
         <li><blockquote><p>“I thought there was a full band on stage when I first heard you! I was shocked when I saw you were performing solo.”</p><cite>Audience member, Quechee Balloon Festival</cite></blockquote></li>
@@ -236,7 +234,7 @@
   </details>
 
   <details id="press">
-    <summary><span class="label">PRESS</span><span class="hint">Lakeville Journal</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">PRESS</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <article class="press">
         <p class="pub">The Lakeville Journal</p>
@@ -249,7 +247,7 @@
   </details>
 
   <details id="bio">
-    <summary><span class="label">BIO</span><span class="hint">About Elijah</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">BIO</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <div class="bio">
         <p>Elijah Stone is a New York–based singer-songwriter whose originals blend pop, rock, and soul into a fresh yet timeless sound. His debut EP <em>Twenty-Second Catch</em> was released in 2025, showcasing groove-forward, hook-driven songs with candid lyricism. Following that, he released his first music video for “Look Listen” and completed a 22-show summer tour of the northeast. He has a new album forthcoming, and is currently booking shows for 2027. Elijah’s live show is fun, dynamic, and good for all ages.</p>
@@ -258,7 +256,7 @@
   </details>
 
   <details id="shows">
-    <summary><span class="label">2026 SHOWS</span><span class="hint">22 shows</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">2026 SHOWS</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <ul class="shows">
         <li><span class="d">Jun 6</span><span><span class="v">Newton Porchfest</span><span class="t">Newton, MA</span></span></li>
@@ -288,7 +286,7 @@
   </details>
 
   <details id="tech">
-    <summary><span class="label">SHOW &amp; TECH</span><span class="hint">Set lengths, gear, setup</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">SHOW &amp; TECH</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <div class="tech">
         <div class="box">
@@ -330,7 +328,7 @@
   </details>
 
   <details id="photos">
-    <summary><span class="label">PHOTOS</span><span class="hint">Hi-res downloads</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">PHOTOS</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <div class="photo-top">
         <p>For event listings and show promotion.</p>
@@ -366,7 +364,7 @@
   </details>
 
   <details id="music">
-    <summary><span class="label">MUSIC</span><span class="hint">Stream and watch</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">MUSIC</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <div class="rows">
         <div class="row">
@@ -389,7 +387,7 @@
   </details>
 
   <details id="contact">
-    <summary><span class="label">CONTACT</span><span class="hint">Booking</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
+    <summary><span class="label">CONTACT</span><svg class="arrow" viewBox="0 0 40 44" aria-hidden="true"><use href="#arrow"/></svg></summary>
     <div class="panel">
       <p class="contact-lead">For booking, email Elijah directly:</p>
       <a class="email" href="mailto:elijahstonemusic@gmail.com?subject=Booking%20inquiry">elijahstonemusic@gmail.com</a>
