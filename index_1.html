@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elijah Stone</title>
+<meta name="description" content="Elijah Stone is an NYC singer-songwriter making timeless, groovy pop. Stream Twenty-Second Catch and watch him live.">
+<meta property="og:title" content="Elijah Stone">
+<meta property="og:description" content="NYC singer-songwriter making timeless, groovy pop.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elijahstonemusic.com/">
+<meta property="og:image" content="https://elijahstonemusic.com/images/share-live.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f0f12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f12; --panel:#17171c; --line:#262631;
+    --text:#f3f4f6; --muted:#a7adc0;
+    --purple:#8A77D1; --lilac:#D8D2F2; --blue:#5B8CFF;
+    --display:"Bricolage Grotesque", Inter, system-ui, sans-serif;
+    --body:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--body);color:var(--text);line-height:1.6;
+    background:
+      radial-gradient(900px 500px at 85% -10%, rgba(91,140,255,.16), transparent 60%),
+      radial-gradient(800px 500px at -10% 30%, rgba(138,119,209,.14), transparent 60%),
+      var(--bg);}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* top bar */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;flex-wrap:wrap}
+  .top .brand{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.01em}
+  .top nav{display:flex;gap:6px;flex-wrap:wrap}
+  .top nav a{padding:6px 12px;border-radius:999px;font-size:.92rem;color:var(--muted);transition:color .15s, background .15s}
+  .top nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+  .top nav a.epk{color:var(--text);border:1px solid var(--line)}
+
+  /* hero */
+  .hero{padding:28px 0 8px}
+  .hero h1{font-family:Arial, Helvetica, sans-serif;font-weight:700;
+    font-size:clamp(3.2rem, 13vw, 8.5rem);line-height:.92;letter-spacing:.01em;margin:0;color:#fff}
+  .squiggle{display:block;width:min(520px, 70%);height:auto;margin:6px 0 0 4px;transform:rotate(-1.5deg)}
+  .tagline{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem, 2.6vw, 1.6rem);
+    color:var(--lilac);margin:14px 0 26px;max-width:32ch;line-height:1.3}
+  .hero-photo{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.45);aspect-ratio:16/9}
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 18px;border-radius:14px;font-weight:600;font-size:.98rem;
+    background:linear-gradient(180deg,#1d1d24,#14141a);border:1px solid var(--line);transition:transform .15s, box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  .btn.primary{background:linear-gradient(180deg,var(--purple),#6f5fb0);border-color:#6f5fb0;color:#fff}
+  .btn.blue{background:linear-gradient(180deg,var(--blue),#3f6be0);border-color:#3f6be0;color:#fff}
+
+  /* sections */
+  section.block{padding:64px 0 0}
+  .block h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem, 5vw, 3rem);line-height:1;margin:0 0 20px;letter-spacing:-.01em}
+  .video{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vid-title{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 12px;color:var(--lilac)}
+  .bio{font-size:1.12rem;max-width:62ch;color:#e6e7ee}
+  .bio p{margin:0}
+
+  /* new single */
+  .single{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:32px;align-items:center}
+  .single .cover{aspect-ratio:1/1;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4);transform:rotate(-1.5deg)}
+  .single .cover img{width:100%;height:100%;object-fit:cover}
+  .single-title{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;font-size:clamp(3rem, 9vw, 5.5rem);line-height:.95;margin:0;color:#fff;letter-spacing:-.01em}
+  .single-date{font-family:var(--display);font-weight:600;font-size:1.25rem;color:var(--lilac);margin:10px 0 0}
+  .single .cta-row{margin-top:20px}
+
+  /* listen */
+  .ep-name{margin:-8px 0 18px;color:var(--muted);font-size:1.05rem}
+  .songs{list-style:none;margin:0;padding:0;counter-reset:s}
+  .songs li{counter-increment:s;display:flex;align-items:baseline;gap:16px;padding:6px 0;
+    font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 75;font-size:clamp(2rem, 6vw, 3.4rem);line-height:1.05;letter-spacing:-.01em;color:#fff}
+  .songs li::before{content:counter(s);font-family:var(--body);font-weight:600;font-size:.95rem;color:var(--purple);min-width:1.2em}
+  .songs li:nth-child(even){color:var(--lilac)}
+
+  /* photos */
+  .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:6px}
+  .photos figure{margin:0;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.4);transition:transform .25s}
+  .photos figure:nth-child(1){transform:rotate(-2deg)}
+  .photos figure:nth-child(2){transform:rotate(1.5deg) translateY(10px)}
+  .photos figure:nth-child(3){transform:rotate(-1deg)}
+  .photos figure:hover{transform:rotate(0) scale(1.02)}
+  .photos img{width:100%;height:100%;object-fit:cover}
+
+  /* contact */
+  .contact{padding:30px;border:1px solid var(--line);border-radius:20px;background:rgba(23,23,28,.7)}
+  .contact p{margin:0 0 18px;color:#e6e7ee;font-size:1.05rem}
+  .contact .cta-row{margin-top:0}
+  .booking{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .booking span{font-family:var(--display);font-weight:700;font-size:1.25rem}
+
+  footer{margin:72px 0 28px;color:#8b90a6;font-size:.88rem}
+
+  @media (max-width:760px){
+    .wrap{padding:0 18px}
+    .photos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:10px 4px 18px;margin:0 -18px;padding-left:18px;padding-right:18px}
+    .photos figure{flex:0 0 72%;scroll-snap-align:center}
+    section.block{padding-top:52px}
+    .single{grid-template-columns:1fr;gap:22px}
+    .single .cover{max-width:300px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="brand" href="/">ELIJAH STONE</a>
+    <nav aria-label="Main">
+      <a href="#watch">Watch</a>
+      <a href="#about">About</a>
+      <a href="#listen">Listen</a>
+      <a href="#photos">Photos</a>
+      <a href="#contact">Contact</a>
+      <a class="epk" href="/epk/">EPK</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>ELIJAH<br>STONE</h1>
+    <svg class="squiggle" viewBox="0 0 520 28" aria-hidden="true">
+      <defs><linearGradient id="sq" x1="0" x2="1"><stop offset="0" stop-color="#8A77D1"/><stop offset="1" stop-color="#5B8CFF"/></linearGradient></defs>
+      <path d="M4 18 C 40 6, 70 26, 108 14 S 170 4, 210 16 S 280 26, 318 12 S 390 4, 430 15 S 490 22, 516 9" fill="none" stroke="url(#sq)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <p class="tagline">NYC singer-songwriter making timeless, groovy pop.</p>
+    <div class="hero-photo">
+      <img src="images/header-live.jpg" alt="Elijah Stone singing on a purple-lit stage" width="2400" height="1350">
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="#watch">Watch</a>
+      <a class="btn blue" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </section>
+
+  <!-- ===== "I'LL PASS" — new single ===== -->
+  <section class="block" id="new-single">
+    <h2>New single</h2>
+    <div class="single">
+      <div class="cover"><img src="images/ill-pass-cover.jpg" alt="Cover art for the single I'll Pass by Elijah Stone" width="1000" height="1000"></div>
+      <div>
+        <h3 class="single-title">I’ll Pass</h3>
+        <p class="single-date">Out Friday, December 18</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://distrokid.com/hyperfollow/elijahstone2/i-ll-pass" target="_blank" rel="noopener">Pre-save</a>
+        </div>
+      </div>
+    </div>
+    <!-- Music video goes here on Dec 18 -->
+  </section>
+
+  <section class="block" id="watch">
+    <h2>Watch</h2>
+    <h3 class="vid-title">Live highlight reel</h3>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/SvuoNSjaqKA?rel=0" title="Elijah Stone — live highlight reel" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <h3 class="vid-title" style="margin-top:36px">“Look Listen” music video</h3>
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/uQIve5WK1C4?rel=0" title="Elijah Stone — Look Listen (official music video)" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <h2>About</h2>
+    <div class="bio">
+      <p>Elijah Stone is a New York–based singer-songwriter whose originals blend pop, rock, and soul into a fresh yet timeless sound. His debut EP <em>Twenty-Second Catch</em> was released in 2025, showcasing groove-forward, hook-driven songs with candid lyricism. Following that, he released his first music video for “Look Listen” and completed a 22-show summer tour of the Northeast. He has a new album forthcoming, and is currently booking shows for 2027.</p>
+    </div>
+  </section>
+
+  <section class="block" id="listen">
+    <h2>Listen</h2>
+    <p class="ep-name"><em>Twenty-Second Catch</em>, debut EP (2025)</p>
+    <ol class="songs">
+      <li>Walk All Over Me</li>
+      <li>Eileen Never Lies</li>
+      <li>Look Listen</li>
+      <li>People Pleaser</li>
+    </ol>
+    <div class="cta-row">
+      <a class="btn" href="https://open.spotify.com/album/3GSTQy9r1nsRspMinUZYtq" target="_blank" rel="noopener">Spotify</a>
+      <a class="btn" href="https://music.apple.com/us/album/twenty-second-catch-ep/1842371913" target="_blank" rel="noopener">Apple Music</a>
+    </div>
+  </section>
+
+  <!-- ===== UPCOMING SHOWS — hidden for now. Ask Claude to switch this on when 2027 dates are booked. ===== -->
+
+  <section class="block" id="photos">
+    <h2>Photos</h2>
+    <div class="photos">
+      <figure><img src="images/live-outdoor.jpg" alt="Elijah Stone playing an outdoor daytime show" loading="lazy" width="1200" height="1500"></figure>
+      <figure><img src="images/hillside-portrait.jpg" alt="Portrait of Elijah Stone outdoors on a sunny hillside" loading="lazy" width="1200" height="1500"></figure>
+      <figure><img src="images/indoor-guitar.jpg" alt="Elijah Stone playing electric guitar indoors next to his amp" loading="lazy" width="1200" height="1500"></figure>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>Questions, collabs, or just want to say hi? Send me a note.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:elijahstonemusic@gmail.com">elijahstonemusic@gmail.com</a>
+        <a class="btn" href="https://www.instagram.com/elijahstonesongs/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.youtube.com/@elijahstonesongs" target="_blank" rel="noopener">YouTube</a>
+      </div>
+      <div class="booking">
+        <span>Booking a show?</span>
+        <a class="btn blue" href="/epk/">Open the EPK</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© <span id="year">2026</span> Elijah Stone Music Group • NYC</footer>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
